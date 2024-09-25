@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="main.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 style="text-align: center">Registration Form</h1>
+        <form id="regi">
+            <table>
+                <tr>
+                    <td><label for="ph-no">Phone Number</label></td>
+                    <td><input type="tel" id="ph-no" maxlength="10" name="phone" pattern="\d{10}" oninput="this.value = this.value.replace(/[^0-9]/g, '');"></td>
+                </tr>
+                <tr>
+                    <td><label for="pass_word">PassWord</label></td>
+                    <td><input type="password" id="pass_word" name="pass"></td>
+                </tr>
+                <tr>
+                    <td><label for="email-id">Email id</label></td>
+                    <td><input type="email" id="email-id" name="Email"></td>
+                </tr>
+               
+                <tr>
+                    <td><label>Job type</label></td>
+                </tr>
+                <div class="checkbox">
+                <tr>
+                    <td><input type="checkbox" id="check-box1" name="tickbox"style="margin-right: 20px;">Remote</td>
+                    <td><input type="checkbox" id="check-box2" name="tickbox" style="margin-right: 20px;">Relocation</td>
+                </tr>
+                </div>
+                <tr>
+                    <td><label for="exp">Experience</label></td>
+                    <td>
+                        <select id="exp" name="Exp">
+                            <option value="" disabled selected>Select your experience</option>
+                            <option value="fresher">Fresher</option>
+                            <option value="0-1">0-1 yrs</option>
+                            <option value="2-4">2-4 yrs</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label>Immediate Joiner</label> </td>
+                </tr>
+                <tr>
+                    <td><input type="radio" id="yes-choice" name="choi" style="margin-right: 20px;"value="yes">Yes</td>
+                    <td><input type="radio" id="no-choice" name="choi" value="no"style="margin-right: 20px;">No</td>
+                </tr>    
+                <tr>
+                    <td><label for="age">Age</label></td>
+                    <td><input type="number" id="age" name="_age"></td>
+                </tr>    
+                <tr>
+                    <td><label for="fi_le">Upload File</label></td>
+                    <td><input type="file" id="fi_le" name="File"></td>
+                </tr>    
+                <tr>
+                    <td><label for="da_te">Date</label></td>
+                    <td><input type="datetime-local" id="da_te" name="Date"></td>
+                </tr>      
+                <tr>
+                    <td colspan="2" class="button-container">
+                        <button type="submit">Submit</button>
+                        <button type="reset">Reset</button>
+                    </td>
+                </tr>
+            </table>
+            <p id="error"></p>
+        </form>
+    </div>
+</body>
+</html>
